@@ -1,0 +1,20 @@
+---
+- name: Instalando Rundeck
+  hosts: automation
+  tasks: 
+    - name: Add Repositorio Rundeck
+      yum: 
+        name: http://repo.rundeck.org/latest.rpm 
+        state: present
+      register: result
+
+    - name: Mostrando Resultado
+      debug:
+#       msg: "Texto Livre"  >> Outra opção para expor mensagem
+        var: result.stdout
+
+    - name: Instalando Rundeck
+      yum: 
+        name: ['java-1.8.0','rundeck']
+        state: present
+

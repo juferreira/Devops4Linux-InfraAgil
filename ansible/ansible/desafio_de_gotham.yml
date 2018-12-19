@@ -1,0 +1,52 @@
+---
+- name: Playbook Desafio de Gotham
+  hosts: all
+  tasks:
+
+    - name: Removendo o NGINX - Ubuntu
+      apt:
+        name: nginx*
+        state: absent
+      when: ansible_distribution == "Ubuntu"
+
+    - name: Removendo o NGINX - CentOS
+      yum:
+        name: nginx*
+        state: absent
+      when: ansible_distribution == "CentOS"
+
+    - name: Instalando Pacotes - Ubuntu
+      apt: 
+        name: ['apache2','libapache2-mod-php7.0','php7.0']
+        state: present
+        update_cache: yes
+      when: ansible_distribution == "Ubuntu"
+
+    - name: Instalando Pacotes - CentOS
+      yum: 
+        name: ['httpd','php']
+        state: present
+      notify: httpd
+      when: ansible_distribution == "CentOS"
+
+    - name: Habilitar Modulo PHP7.0
+      command: " a2enmod php7.0"
+      notify: apache 
+      when: ansible_distribution == "Ubuntu"
+
+    - name: Copiando Arquivo Index.php
+      copy:
+        src: /etc/ansible/index.php
+        dest: /var/www/html/index.php
+
+#Gerenciando serviços
+  handlers:
+    - name: httpd
+      service:
+        name: httpd
+        state: restarted
+
+    - name: apache
+      service:
+        name: apache2
+        state: restarted

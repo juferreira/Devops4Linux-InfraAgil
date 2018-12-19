@@ -1,0 +1,8 @@
+- name: Instalando Pacotes - CentOS
+  command: rpm -Uvh /root/puppet6-release-el-5.noarch.rpm
+  when: ansible_os_family == "RedHat"
+
+- name: Instalando o puppet-agent - CentOS
+  yum: 
+    name: puppet-agent
+    state: present

@@ -1,0 +1,9 @@
+- name: Instalando Pacotes - Ubuntu
+  command: dpkg -i /root/puppet6-release-xenial.deb
+  when: ansible_os_family == "Debian"
+
+- name: Instalando o puppet-agent - Ubuntu
+  apt: 
+    name: puppet-agent
+    state: present
+    update_cache: yes
