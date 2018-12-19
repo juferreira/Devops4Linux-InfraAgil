@@ -1,0 +1,220 @@
+root@docker:~# cat docker.txt 
+    1  exit
+    2  clear
+    3  apt install python -y
+    4  sndible -i hosts automation -m ping
+    5  andible -i hosts automation -m ping
+    6  ansible -i hosts automation -m ping
+    7  ls /tmp/
+    8  exit
+    9  puppet agent -t
+   10  puppet agent -t --server devops.salas4linux.com.br
+   11  ss -lntp
+   12  puppet resource service puppetserver ensure=running
+   13  puppet agent -t --server devops.salas4linux.com.br
+   14  ls
+   15  ls /etc/
+   16  ls /etc/puppetlabs/
+   17  clear
+   18  #puppet agent -t --server devops.salas4linux.com.br
+   19  puppet agent -t --server devops.salas4linux.com.br
+   20  exit
+   21  tail -f /var/log/syslog
+   22  exit
+   23  wich docker
+   24  which docker
+   25  cd /etc/
+   26  ls *dock*
+   27  puppet agent -t --server devops.salas4linux.com.br
+   28  which docker
+   29  ls *dock*
+   30  cd ..
+   31  puppet agent -t --server devops.salas4linux.com.br
+   32  docker
+   33  apt search docker
+   34  puppet agent -t --server devops.salas4linux.com.br
+   35  docker --version
+   36  man man
+   37  man 7 namespace
+   38  man 7 
+   39  man 7 namespace
+   40  man 7 Namespace
+   41  man 7 namespaces
+   42  iptables -S
+   43  ip a sh docker0
+   44  clear
+   45  docker ps
+   46  docker ps -a
+   47  docker help
+   48  docker ps --help
+   49  clear 
+   50  uname -r
+   51  ps -aux
+   52  ps -ef
+   53  ps aux | wc -l
+   54  clear
+   55  #docker run [OPTION] image [COMANDO]
+   56  docker run debian ls /etc
+   57  docker ps -a
+   58  docker ps --help
+   59  ]
+   60  docker run --name gaviao_negro -it debian bash
+   61  docker ps -a
+   62  docker run --name mulher_gaviao -it centos bash
+   63  docker ps
+   64  docker attach mulher_gaviao
+   65  docker ps 
+   66  docker attach mulher_gaviao
+   67  ps -ef | grep ping
+   68  docker exec -it mulher_gaviao ls /
+   69  docker exec mulher_gaviao ls /etc/resolv.conf/
+   70  docker exec mulher_gaviao cat /etc/resolv.conf
+   71  docker ps
+   72  clear
+   73  docker ps -a
+   74  docker rm gracious_nash
+   75  docker ps -a
+   76  docker system prune
+   77  docker ps -a
+   78  docker images
+   79  docker pull alpine
+   80  clear
+   81  docker search ubuntu
+   82  docker search 4linux
+   83  docker search osb
+   84  clear 
+   85  docker volume ls
+   86  docker volume create dcwomen
+   87  docker volume ls
+   88  cd /var/lib/docker/volumes/dcwomen/_data/
+   89  touch {arlequina,hera_venenosa,mulher_maravilha,supergirl}
+   90  ls
+   91  cd
+   92  docker run -dti --name dcwomen -h womendc -v dcwomen:/root/pasta_womendc centos bash
+   93  docker ps
+   94  docker exec -ti dcwomen bash
+   95  ls
+   96  cd /var/lib/docker/volumes/dcwomen/_data/
+   97  ls
+   98  cat mulher_maravilha 
+   99  echo Ivy Poison > hera_venenosa 
+  100  docker exec -ti dcwomen bash
+  101  cd 
+  102  mkdir supermen
+  103  cd supermen/
+  104  touch {superman[1..10]}
+  105  ls
+  106  rm \{sup*
+  107  ls
+  108  touch superman{1..10}
+  109  ls
+  110  docker run -dti --name Clark -h Kent -v /root/supermen/:/var/krypton debian bash
+  111  docker exec -ti Clark bash
+  112  docker inspect Clark
+  113  docker stats Clark
+  114  cd 
+  115  docker run -d -p 8082:80 --name apache_server -h apache_server apache2
+  116  docker run -d -p 8082:80 --name apache_server -h apache_server httpd
+  117  docker ps
+  118  docker attach root@docker:~# docker ps
+  119  CONTAINER ID        IMAGE               COMMAND              CREATED              STATUS              PORTS                  NAMES
+  120  5245d4e98233        httpd               "httpd-foreground"   About a minute ago   Up About a minute   0.0.0.0:8082->80/tcp   apache_server
+  121  80cee1a2e7a7        debian              "bash"               12 minutes ago       Up 12 minutes                              Clark
+  122  8ba25d560b72        centos              "bash"               24 minutes ago       Up 24 minutes                              dcwomen
+  123  877d9e5b670b        centos              "bash"               About an hour ago    Up About an hour                           mulher_gaviao
+  124  root@docker:~#
+  125  docker exec -ti apache_server bash
+  126  docker ps
+  127  docker network create --subnet 10.0.0.0/16 dockerlan
+  128  docker network list
+  129  docker run -dti --name cliente_apache -h cliente_apache --ip 10.0.0.10 --net dockerlan debian bash
+  130  docker network inspect dockerlan
+  131  docker network connect dockerlan apache_server
+  132  docker inspect apache_server
+  133  docker exec -ti cliente_apache bash
+  134  docker ps 
+  135  docker commit cliente_apache cliente_apache_curl
+  136  docker images
+  137  docker run -ti --name curl -h cliente_curl cliente_apache_curl
+  138  exit
+  139  curl -L https://github.com/docker/compose/releases/download/1.21.2/docker-compose-$(uname -s)-$(uname -m) -o /usr/local/bin/docker-compose
+  140  ls -lh /usr/local/bin/docker-compose 
+  141  more /usr/local/bin/docker-compose 
+  142  chmod +x /usr/local/bin/docker-compose 
+  143  #de
+  144  mkdir wordpress
+  145  cd wordpress/
+  146  vim docker-compose.yml
+  147  docker-compose  up -d
+  148  vim docker-compose.yml
+  149  docker-compose  up -d
+  150  docker logs -f docker-compose
+  151  cd wordpress/
+  152  docker logs -f docker-compose
+  153  docker logs -f wordpress
+  154  vim docker-compose.yml
+  155  docker-compose  up -d
+  156  docker ps -a
+  157  docker rm root@docker:~/wordpress# docker logs -f docker-compose
+  158  Error: No such container: docker-compose
+  159  root@docker:~/wordpress# 
+  160  root@docker:~/wordpress# docker logs -f wordpress
+  161  Error: No such container: wordpress
+  162  root@docker:~/wordpress# 
+  163  root@docker:~/wordpress# vim docker-compose.yml
+  164  root@docker:~/wordpress# 
+  165  root@docker:~/wordpress# docker-compose  up -d
+  166  Pulling mysql_server (mysql:5.7.22)...
+  167  5.7.22: Pulling from library/mysql
+  168  be8881be8156: Pull complete
+  169  c3995dabd1d7: Pull complete
+  170  9931fdda3586: Pull complete
+  171  bb1b6b6eff6a: Pull complete
+  172  a65f125fa718: Pull complete
+  173  2d9f8dd09be2: Pull complete
+  174  37b912cb2afe: Pull complete
+  175  79592d21cb7f: Pull complete
+  176  00bfe968d82d: Pull complete
+  177  79cf546d4770: Pull complete
+  178  2b3c2e6bacee: Pull complete
+  179  Digest: sha256:aaba540cdd9313645d892f4f20573e8b42b30e5be71c054b7befed2f7da5f85b
+  180  Status: Downloaded newer image for mysql:5.7.22
+  181  Recreating wordpress_mysql_server_1 ... done
+  182  Recreating wordpress_wordpress_1    ... error
+  183  ERROR: for wordpress_wordpress_1  Cannot start service wordpress: b'Cannot link to a non running container: /wordpress_mysql_server_1 AS /wordpress_wordpress_1/m
+  184  ERROR: for wordpress  Cannot start service wordpress: b'Cannot link to a non running container: /wordpress_mysql_server_1 AS /wordpress_wordpress_1/mysql_server_1'
+  185  ERROR: Encountered errors while bringing up the project.
+  186  root@docker:~/wordpress#
+  187  docker ps -a
+  188  docker rm wordpress_wordpress_1 wordpress_mysql_server_1 5f46dc8a763e_wordpress_wordpress_1
+  189  docker-compose up -d
+  190  docker ps
+  191  docker ps -a
+  192  vim docker-compose.yml 
+  193  docker rm -f wordpress_wordpress_1 wordpress_mysql_server_1
+  194  docker-compose up -d
+  195  docker ps
+  196  docker logs -f wordpress_wordpress_1
+  197  clear
+  198  docker run -d --name portainer -p 8081:9000 -v /var/run/docker.sock:/var/run/docker.sock portainer/portainer
+  199  cd 
+  200  mkdir Dockerfile
+  201  cd Doq
+  202  cd Dockerfile/
+  203  vim Dockerfile
+  204  docker build . -t cacador_de_marte
+  205  docker ps
+  206  docker ps -a
+  207  docker images
+  208  cd 
+  209  docker save cacador_de_marte -o cacador_de_marte.tar
+  210  ls
+  211  docker rmi cacador_de_marte:latest 
+  212  docker load -i cacador_de_marte.tar 
+  213  docker run -dti cacador_de_marte
+  214  docker ps
+  215  docker exec -ti elastic_jang bash
+  216  exit
+  217  $(cat previsao_do_tempo)
+  218  hidtory > docker.txt
+  219  history > docker.txt
